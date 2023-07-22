@@ -1,0 +1,223 @@
+@import "reset";
+
+$darkgray: #222121 ;
+$milk:#fffaf0;
+
+
+
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.wrapper{
+    min-height: 100%;
+    overflow-x: hidden;
+
+}
+.header {
+    font-family: Victor Mono;
+    font-weight: 500;
+    position: relative;
+}   
+
+.menu__button{
+    width: 40px;
+    height: 40px;
+    border: 3px solid $darkgray ;
+    border-radius: 10px;
+    position: absolute;
+    right: 2%;
+    top: 10%;
+    margin-top: 20px;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .8s;
+}
+.menu__burger-item{
+    width: 25px;
+    height: 4px;
+    border-radius: 2px;
+    background: $darkgray;
+    display: block;
+}
+.menu__burger-item + .menu__burger-item{
+    margin-top: 4px;
+}
+.menu__button-open{
+
+    border: 3px solid $milk ;
+    border-radius: 50%;
+
+    .menu__burger{
+
+        .menu__burger-item{
+            background: $milk;
+            width: 20px;
+            }
+
+    }   
+    
+}
+.header__inner {
+}
+.header__nav {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 30px;
+    height: 100vh;
+    background: $darkgray;
+    max-width: 40vh;
+    margin-left: auto;
+    transform: translateX(100%);
+    transition: all .8s;
+    opacity: 60%;
+}
+.header__nav-open{
+    transform: translateX(0);
+
+}
+.header__nav-link {
+    font-size: 20px;
+    color: $milk;
+    transition: all .6s;
+    position: relative;
+    &::before{
+        content: "";
+        width: 0;
+        height: 2px;
+        background: $milk;
+        position: absolute;        
+        top: 130%;
+        transition: all .6s;
+
+    }
+    &:hover{
+
+        transform: scale(110%);
+        &::before{
+            width: 100%;
+        }
+    }
+}
+
+
+
+// NUMBERS   =========================================================================================================
+
+span{
+    display: block;
+}
+.numbers{
+    height: 100vh;
+    background: #5c3837;
+    padding-top: 200px;
+    font-family: Victor Mono;
+}
+
+.numbers__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.numbers__title {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.numbers__result {
+    font-size: 50px;
+    margin-bottom: 25px;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.numbers__button {
+    font-size: 18px;
+    padding: 20px;
+    border-radius: 20px;
+    background: $milk;
+    margin-bottom: 30px;
+}
+.numbers__new {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.number__range {
+    margin-bottom: 15px;
+}
+.numbers__count {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+}
+.numbers__radio {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.numbers__fromto {
+    display: flex;
+    gap: 15px;
+}
+.numbers__radio-item {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    color: $milk;
+}
+.numbers__fromto-item {
+    display: flex;
+    gap: 10px;
+    font-size: 18px;
+    color: $milk;
+    align-items: center;
+}
+.numbers__radio-btn {
+}
+.numbers__radio-text {
+}
+.numbers__fromto-btn {
+    padding: 5px 15px;
+    background: $milk;
+}
+.numbers__fromto-text {
+}
+
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    background: #fffaf0; /* Otherwise white in Chrome */
+  } 
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000000;
+    height: 20px;
+    width: 16px;
+    border-radius: 50%;
+    background: #861616;
+    cursor: pointer;
+    margin-top: -6px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: $milk;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }

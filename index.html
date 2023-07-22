@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheeseBurger</title>
+
+    <link rel="short icon" href="/images/burger.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Victor+Mono:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+                <div class="menu__button ">
+                    <div class="menu__burger ">
+                        <span class="menu__burger-item first"></span>
+                        <span class="menu__burger-item second"></span>
+                        <span class="menu__burger-item third"></span>
+                    </div>
+                </div>
+                <div class="header__inner">
+                    <nav class="header__nav">
+                        <a href="" class="header__nav-link">Числа</a>
+                        <a href="" class="header__nav-link">Определить победителя</a>
+                        <a href="" class="header__nav-link">Пароли</a>
+                        <a href="" class="header__nav-link">Ответы и предсказывания</a>
+                        <a href="" class="header__nav-link">Вопросы</a>
+                    </nav>
+                </div>
+        </header>
+        <main class="main">
+            <section class="numbers">
+                <div class="container">
+                    <div class="numbers__inner">
+                        <h2 class="numbers__title">Случайное число:</h2>
+                        <p class="numbers__result">8</p>
+                        <button class="numbers__button">Сгенерировать</button>
+                        <span class="numbers__new">новую последовательность из</span>
+                        <input type="range" min="1" max="50" class="number__range" id="mySlider">
+                        <span class="numbers__count">
+                            <span class="numbers__count-value">7</span>
+                            <span class="numbers__count-text">случайного числа</span>
+                        </span>
+                       
+                        <ul class="numbers__radio">
+                            <li class="numbers__radio-item">
+                                <input class="numbers__radio-btn" type="radio">
+                                <span class="numbers__radio-text">из диапазона или</span>
+                            </li>
+                            <li class="numbers__radio-item">
+                                <input class="numbers__radio-btn" type="radio">
+                                <span class="numbers__radio-text">из списка</span>
+                            </li>
+                        </ul>
+                        <ul class="numbers__fromto">
+                            <li class="numbers__fromto-item">
+                                <span class="numbers__fromto-text ">от</span>
+                                <input class="numbers__fromto-btn from" type="text">
+                               
+                            </li>
+                            <li class="numbers__fromto-item">
+                                <span class="numbers__fromto-text ">до</span>
+                                <input class="numbers__fromto-btn to" type="text" >
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>
